@@ -127,6 +127,7 @@ public class school_notice extends AppCompatActivity {
             linearLayout1.addView(button);
             linearLayout1.addView(txt);
             linearLayout.addView(linearLayout1);
+            System.out.println("小改动");
         }
 
     }

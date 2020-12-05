@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_course"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="30"
+            android:text="课程编号"
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+            android:textColor="@android:color/holo_blue_light">
+
+        </TextView>
+        <EditText
+            android:text="2018180001"
+            android:id="@+id/course_number"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_weight="70">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="30"
+            android:text="课程名称"
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+            android:textColor="@android:color/holo_blue_light">
+
+        </TextView>
+        <EditText
+            android:text="移动应用开发"
+            android:id="@+id/course_name"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_weight="70">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="30"
+            android:text="老师工号"
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+            android:textColor="@android:color/holo_blue_light">
+
+        </TextView>
+        <EditText
+            android:text="20181800"
+            android:id="@+id/teacher_number"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_weight="70">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="30"
+            android:text="老师姓名"
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+            android:textColor="@android:color/holo_blue_light">
+
+        </TextView>
+        <EditText
+            android:text="liwenlong"
+            android:id="@+id/teacher_name"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_weight="70">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="30"
+            android:text="学院："
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+            android:textColor="@android:color/holo_blue_light">
+
+        </TextView>
+        <EditText
+            android:text="jingjiguanli"
+            android:id="@+id/department"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_weight="70">
+
+        </EditText>
+    </LinearLayout>
+    <Button
+        android:id="@+id/confirm_add"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="确认添加"
+        android:layout_marginTop="20dp">
+
+    </Button>
+    <TextView
+        android:id="@+id/warn"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="15dp">
+
+    </TextView>
+
+</LinearLayout>

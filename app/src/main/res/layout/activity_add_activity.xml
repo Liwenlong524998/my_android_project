@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_activity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="活动标题:"
+            android:textSize="30dp"
+            android:layout_weight="15">
+
+        </TextView>
+        <EditText
+            android:id="@+id/activity_title"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_weight="85"
+            android:textSize="20dp">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="老师工号:"
+            android:textSize="30dp"
+            android:layout_weight="15">
+
+        </TextView>
+        <EditText
+            android:id="@+id/laoshigonghao"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_weight="85"
+            android:textSize="20dp">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="340dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="活动内容:"
+            android:textSize="30dp"
+            >
+
+        </TextView>
+        <EditText
+            android:id="@+id/huodongneirong"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:lines="10"
+            android:textSize="20dp"
+            android:gravity="left|top"
+            >
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/add_activity"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="确认添加"
+            android:textSize="15dp"></Button>
+        <TextView
+            android:id="@+id/warn"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:textSize="15dp">
+
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".for_register"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:text="请选择你的身份"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/holo_blue_dark"></TextView>
+    <TableLayout
+        android:layout_width="410dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="60dp">
+            <TableRow>
+                <Button
+                    android:id="@+id/for_teacher"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="140dp"
+                    android:text="老师"
+                    android:layout_weight="50"
+                    />
+                <Button
+                    android:id="@+id/for_allStudent"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="140dp"
+                    android:text="学生"
+                    android:layout_weight="50"
+                    />
+            </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/for_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="140dp"
+                android:text="家长"
+                android:layout_weight="50"
+                />
+            <TextView
+                android:layout_weight="50">
+            </TextView>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

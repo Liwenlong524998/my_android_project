@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:text="请假信息"
+            android:textSize="40dp"
+            android:textColor="#3F51B5"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/warn"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:textSize="20dp"
+            android:textColor="#3F51B5"
+            android:gravity="center">
+        </TextView>
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+<TableLayout
+android:layout_width="410dp"
+android:layout_height="60dp">
+<TableRow>
+    <Button
+        android:id="@+id/home"
+        android:text="主页"
+        android:layout_weight="30"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        >
+
+    </Button>
+    <Button
+        android:id="@+id/study"
+        android:text="学习"
+        android:layout_weight="30"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
+
+    </Button>
+    <Button
+        android:id="@+id/my"
+        android:text="我的"
+        android:layout_weight="30"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp">
+
+    </Button>
+</TableRow>
+</TableLayout>
+
+</LinearLayout>

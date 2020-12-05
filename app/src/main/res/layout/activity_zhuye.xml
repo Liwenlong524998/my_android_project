@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".zhuyeActivity3">
+
+
+<LinearLayout
+    android:layout_width="410dp"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="76dp"
+        android:layout_height="57dp">
+    </ImageView>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="79dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="20dp"
+        android:text="" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="150dp"
+        android:text="登录"
+        />
+</LinearLayout>
+
+    <TableLayout
+        android:layout_width="410dp"
+        android:layout_height="470dp">
+        <TableRow>
+            <Button
+                android:id="@+id/school_news"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="140dp"
+                android:text="校内新闻"
+                android:layout_weight="50"
+                />
+            <Button
+                android:id="@+id/school_activities"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="140dp"
+                android:text="校内活动"
+                android:layout_weight="50"
+                />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/for_students"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="140dp"
+                android:text="注册"
+                android:layout_weight="50"
+                />
+            <TextView
+                android:layout_weight="50">
+            </TextView>
+
+        </TableRow>
+
+    </TableLayout>
+       <TableLayout
+           android:layout_width="410dp"
+           android:layout_height="60dp">
+           <TableRow>
+               <Button
+                   android:id="@+id/home"
+                   android:text="主页"
+                   android:layout_weight="30"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginRight="5dp"
+                   >
+
+               </Button>
+               <Button
+                   android:id="@+id/study"
+                   android:text="学习"
+                   android:layout_weight="30"
+                   android:layout_marginRight="5dp"
+                   android:layout_marginLeft="5dp">
+
+               </Button>
+               <Button
+                   android:id="@+id/my"
+                   android:text="我的"
+                   android:layout_weight="30"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="10dp">
+
+               </Button>
+           </TableRow>
+       </TableLayout>
+</LinearLayout>

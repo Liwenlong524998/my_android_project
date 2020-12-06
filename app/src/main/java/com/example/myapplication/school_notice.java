@@ -22,14 +22,15 @@ public class school_notice extends AppCompatActivity {
     private dataBase database;
     private String ID;
     private Bundle receive;
-    private Intent for_send;
-    private Bundle send;
+    private Intent send;
+    private Bundle for_send;
     private TextView check;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_school_notice);
+
 
         receive=this.getIntent().getExtras();
         ID=receive.getString("ID");
@@ -46,8 +47,8 @@ public class school_notice extends AppCompatActivity {
         StringBuilder s_id= new StringBuilder();
         String isagree_parent="";
         String isagree_teacher="";
-        for_send=new Intent();
-        send=new Bundle();
+        send=new Intent();
+        for_send=new Bundle();
         int i=0;
         while (cursor1.moveToNext())
         {
@@ -108,17 +109,21 @@ public class school_notice extends AppCompatActivity {
         {
             classID=cursor2.getString(cursor2.getColumnIndex("class_room"));
         }
+        cursor2.close();
         Log.i("Ex04","selectDB="+select_course);
         Cursor cursor3=db.rawQuery(select_course,null);
         while (cursor3.moveToNext())
         {
             course_number=cursor3.getString(cursor3.getColumnIndex("course_number"));
         }
+        cursor3.close();
         String select_notice="select * from notice where course_number='"+course_number+"' or class_name='"+classID+"'";
         Log.i("Ex04","selectDB="+select_notice);
-        Cursor cursor4 =db.rawQuery(select_notice,null);
+        final Cursor cursor4 =db.rawQuery(select_notice,null);
+        String notice_context="";
         while(cursor4.moveToNext())
         {
+            notice_context=cursor4.getString(cursor4.getColumnIndex("notice_context"));
             linearLayout1=new LinearLayout(this);
             txt=new TextView(this);
             txt.setText("您有一条新的通知！");
@@ -127,8 +132,19 @@ public class school_notice extends AppCompatActivity {
             linearLayout1.addView(button);
             linearLayout1.addView(txt);
             linearLayout.addView(linearLayout1);
-            System.out.println("小改动");
+            final String finalNotice_context = notice_context;
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    for_send.putString("type","notice");
+                    for_send.putString("context", finalNotice_context);
+                    send.putExtras(for_send);
+                    send.setClass(school_notice.this,detail_message.class);
+                    startActivity(send);
+                }
+            });
         }
+        cursor4.close();
 
     }
 }

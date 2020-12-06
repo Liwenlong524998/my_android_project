@@ -31,25 +31,32 @@ public class detail_message extends AppCompatActivity {
         type=receive.getString("type");
         filename=receive.getString("context");
 
+        if (type.equals("news") || type.equals("activity"))
+        {
+            FileInputStream in=null;
+            BufferedReader reader=null;
+            String text="";
+            try{
+                in=openFileInput(filename);
+                reader=new BufferedReader(new InputStreamReader(in));
+                StringBuilder result=new StringBuilder();
+                String line;
+                while ((line=reader.readLine())!=null)
+                {
+                    result.append(line);
+                }
+                text=result.toString();
+                reader.close();
 
-        FileInputStream in=null;
-        BufferedReader reader=null;
-        String text="";
-        try{
-            in=openFileInput(filename);
-            reader=new BufferedReader(new InputStreamReader(in));
-            StringBuilder result=new StringBuilder();
-            String line;
-            while ((line=reader.readLine())!=null)
-            {
-                result.append(line);
-            }
-            text=result.toString();
-            reader.close();
+            }catch(IOException e){e.printStackTrace();}
 
-        }catch(IOException e){e.printStackTrace();}
+            file_context.setText(text);
+        }
+        if (type.equals("notice"))
+        {
+            file_context.setText(filename);
+        }
 
-        file_context.setText(text);
 
     }
 }
